@@ -127,8 +127,8 @@ describe(`Function 'validateRegisterForm':`, () => {
     expect(invalidPassword.message).toBe('Email is invalid.');
   });
 
-  it(`should return error for valid password and`
-  + ` email includes double dots`, () => {
+  it(`should return error for password and email`
+  + ` in case of both invalid input`, () => {
     const invalidPassword = validateRegisterForm('test@com', 'ssword1');
 
     expect(invalidPassword.code).toBe(500);
